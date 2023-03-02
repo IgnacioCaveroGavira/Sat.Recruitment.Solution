@@ -25,7 +25,7 @@ namespace Sat.Recruitment.Test
             var userService = new UserService(mockUserRepository.Object);
 
             //Act
-            var userResult = userService.CreateNewUserByType(name, email, address, phone, userType, money);
+            var userResult = userService.CreateNewUserByType(name, email, address, phone, userType.ToString(), money);
 
             //Assert
             Assert.IsType<NormalUser>(userResult);
@@ -54,7 +54,7 @@ namespace Sat.Recruitment.Test
 
 
             //Act
-            var userResult = userService.CreateNewUserByType(name, email, address, phone, userType, money);
+            var userResult = userService.CreateNewUserByType(name, email, address, phone, userType.ToString(), money);
 
 
             //Assert
@@ -85,7 +85,7 @@ namespace Sat.Recruitment.Test
 
 
             //Act
-            var userResult = userService.CreateNewUserByType(name, email, address, phone, userType, money);
+            var userResult = userService.CreateNewUserByType(name, email, address, phone, userType.ToString(), money);
 
 
             //Assert
